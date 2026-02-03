@@ -9,7 +9,7 @@ public class SavingAccount extends com.zeta.Account {
         validate(amount);
         float depositedBalance= acc.getBalance();
         depositedBalance+=amount;
-        acc.setBalance(depositedbal);
+        acc.setBalance(depositedBalance);
         return depositedBalance;
     }
     public float validate(float amount){
