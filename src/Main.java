@@ -10,13 +10,22 @@ public class Main {
     public static void main(String[] args) {
         Account account=new SavingAccount(12);
         Account current = new CurrentAccount(999);
-        bank bank=new bank();
         List<Account> accounts = new ArrayList<>();
-        accounts.add(account);
+        accounts.add(acc);
         accounts.add(current);
         accounts.forEach(account1 -> {
             account1.deposit(2000);
         });
+        accounts.forEach(account1 -> {
+            account1.withdraw(2000);
+        });
+        System.out.println("amount in acc: "+ acc.getBalance());
+        System.out.println("amount in curr_acc: "+ current.getBalance());
+        Bank bank = new Bank();
+        bank.transfer(acc, current, 20);
+        System.out.println("amount in acc: "+ acc.getBalance());
+        System.out.println("amount in curr_acc: "+ current.getBalance());
+        
     }
 }
 
