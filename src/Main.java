@@ -22,7 +22,7 @@ public class Main {
         System.out.println("amount in acc: "+ acc.getBalance());
         System.out.println("amount in curr_acc: "+ current.getBalance());
         Bank bank = new Bank();
-        bank.transfer(acc, current, 20);
+        bank.transfer(acc, current, 500);
         System.out.println("amount in acc: "+ acc.getBalance());
         System.out.println("amount in curr_acc: "+ current.getBalance());
         
