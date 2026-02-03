@@ -9,7 +9,7 @@ public class CurrentAccount extends Account {
         validate(amount);
         float depositedBalance= acc.getBalance();
         depositedBalance+=amount;
-        acc.setBalance(depositedbal);
+        acc.setBalance(depositedBalance);
         return depositedBalance;
     }
     public float validate( float amount){
@@ -26,7 +26,7 @@ public class CurrentAccount extends Account {
         else{
         float withdrawBalance= acc.getBalance();
         withdrawBalance-=amount;
-        acc.setBalance(withdrawbal);
+        acc.setBalance(withdrawBalance);
         return withdrawBalance;
         }
     }
