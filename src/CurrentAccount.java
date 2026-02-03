@@ -5,25 +5,29 @@ public class CurrentAccount extends Account {
         super(number);
     }
     @Override
-    public float deposit(float amount) {
+    public float deposit(Account acc ,float amount) {
         validate(amount);
-        this.setBalance(this.getBalance() + amount);
-        return this.getBalance();
+        float depositedBalance= acc.getBalance();
+        depositedBalance+=amount;
+        acc.setBalance(depositedbal);
+        return depositedBalance;
     }
-    public float validate(float amount){
+    public float validate( float amount){
         if(amount<=0){
             throw new IllegalArgumentException("amount cant be negative ");
         }
     }
     @Override
-    public float withdraw(float amount) {
+    public float withdraw(Account acc, float amount) {
         validate(amount);
-        if(this.getBalance()<amount){
-            throw new InsufficientBalanceException("Current Bal"+this.getBalance());
+        if(acc.getBalance()<amount){
+            throw new InsufficientBalanceException("Money is not sufficient to withdraw");
         }
         else{
-            this.setBalance(this.getBalance() - amount);
-            return this.getBalance();
+        float withdrawBalance= acc.getBalance();
+        withdrawBalance-=amount;
+        acc.setBalance(withdrawbal);
+        return withdrawBalance;
         }
     }
 }
