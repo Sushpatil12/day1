@@ -21,7 +21,7 @@ public class SavingAccount extends com.zeta.Account {
     public float withdraw(Account acc,float amount) {
         validate(amount);
          if(acc.getBalance()<amount){
-             throw new InsufficientBalanceException("Current Bal"+this.getBalance());
+             throw new InsufficientBalanceException("Money is not sufficient to withdraw");
          }
          else{
              float withdrawBalance=acc.getBalance();
