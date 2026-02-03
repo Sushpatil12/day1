@@ -4,7 +4,7 @@ import java.util.logging.Logger;
 public class bank {
     Logger logger = logger.getLogger("bank");
 
-    public boolean transfer(Account acc1, Account acc2, float amount) {
+    void transfer(Account acc1, Account acc2, float amount) {
         try {
             acc1.withdraw(amount);
         } catch (InsufficientBalanceException insufficientBalanceException) {
