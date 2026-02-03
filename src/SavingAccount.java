@@ -5,10 +5,12 @@ public class SavingAccount extends com.zeta.Account {
         super(i);
     }
     @Override
-    public float deposit(float amount) {
+    public float deposit(Account acc ,float amount) {
         validate(amount);
-        this.setBalance(this.getBalance() + amount);
-        return this.getBalance();
+        float depositedBalance= acc.getBalance();
+        depositedBalance+=amount;
+        acc.setBalance(depositedbal);
+        return depositedBalance;
     }
     public float validate(float amount){
         if(amount<=0){
@@ -16,14 +18,16 @@ public class SavingAccount extends com.zeta.Account {
         }
     }
     @Override
-    public float withdraw(float amount) {
+    public float withdraw(Account acc,float amount) {
         validate(amount);
-         if(this.getBalance()<amount){
+         if(acc.getBalance()<amount){
              throw new InsufficientBalanceException("Current Bal"+this.getBalance());
          }
          else{
-             this.setBalance(this.getBalance() - amount);
-             return this.getBalance();
+             float withdrawBalance=acc.getBalance();
+             withdrawBalance-=amount;
+             acc.setBalance(withdrawBalance);
+             return withdrawBalance;
          }
     }
 }
