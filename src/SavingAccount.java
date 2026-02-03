@@ -22,7 +22,7 @@ public class SavingAccount extends com.zeta.Account {
              throw new InsufficientBalanceException("Current Bal"+this.getBalance());
          }
          else{
-             this.setBalance(this.getBalance() + amount);
+             this.setBalance(this.getBalance() - amount);
              return this.getBalance();
          }
     }
