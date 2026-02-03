@@ -23,8 +23,8 @@ public class Main {
         System.out.println("amount in curr_acc: "+ current.getBalance());
         Bank bank = new Bank();
         bank.transfer(acc, current, 500);
-        System.out.println("amount in acc: "+ acc.getBalance());
-        System.out.println("amount in curr_acc: "+ current.getBalance());
+        System.out.println("amount in account: "+ acc.getBalance());
+        System.out.println("amount in current account "+ current.getBalance());
         
     }
 }
